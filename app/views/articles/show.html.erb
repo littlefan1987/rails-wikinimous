@@ -1,8 +1,10 @@
 <div class="container">
   <h1><%= @article.title %></h1>
   <p><%= @article.content %></p>
-  <div><%= link_to "Edit this article", edit_article_path %></span>
-  <div><%= link_to "Delete", article_path(@article), method: :delete, data: { confirm: "Are you sure?" } %>
+  <div class="btn-group" role="group" aria-label="Basic example">
+    <span class="btn btn-secondary"><%= link_to "Edit this article", edit_article_path %></span>
+    <span class="btn btn-secondary"><%= link_to "Delete", article_path(@article), method: :delete, data: { confirm: "Are you sure?" } %>
+    </span>
+    <span class="btn btn-secondary"><%= link_to "Back to index", articles_path %></span>
   </div>
-  <div><%= link_to "Back to index", articles_path %></div>
 </div>
